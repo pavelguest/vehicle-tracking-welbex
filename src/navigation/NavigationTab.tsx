@@ -46,7 +46,6 @@ const NavigationTab = () => {
           ...headerConfig,
           title: t('home.pageTitle'),
           tabBarIcon: ({ color }) => getHomeIcon(color),
-          tabBarTestID: 'tabHome',
         })}
         name="Home"
         component={Home}
@@ -57,7 +56,6 @@ const NavigationTab = () => {
           ...headerConfig,
           title: t('settings.pageTitle'),
           tabBarIcon: ({ color }) => getSettingsIcon(color),
-          tabBarTestID: 'tabSettings',
         })}
         name="Settings"
         component={Settings}
