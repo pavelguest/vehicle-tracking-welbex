@@ -6,6 +6,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import NavigationRoot from './navigation/NavigationRoot';
 import { StatusBar } from 'react-native';
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 
 function App() {
   const theme = useTheme();
@@ -26,23 +27,25 @@ function App() {
 
   return (
     <GestureHandlerRootView style={styleFlex}>
-      <SafeAreaProvider>
-        <NavigationContainer
-          ref={navigationRef}
-          onReady={() => {
-            routeNameRef.current =
-              navigationRef?.current?.getCurrentRoute()?.name;
-          }}
-          onStateChange={handleStateChange}>
-          <StatusBar
-            barStyle="dark-content"
-            translucent={true}
-            hidden={false}
-            backgroundColor="transparent"
-          />
-          <NavigationRoot />
-        </NavigationContainer>
-      </SafeAreaProvider>
+      <BottomSheetModalProvider>
+        <SafeAreaProvider>
+          <NavigationContainer
+            ref={navigationRef}
+            onReady={() => {
+              routeNameRef.current =
+                navigationRef?.current?.getCurrentRoute()?.name;
+            }}
+            onStateChange={handleStateChange}>
+            <StatusBar
+              barStyle="dark-content"
+              translucent={true}
+              hidden={false}
+              backgroundColor="transparent"
+            />
+            <NavigationRoot />
+          </NavigationContainer>
+        </SafeAreaProvider>
+      </BottomSheetModalProvider>
     </GestureHandlerRootView>
   );
 }

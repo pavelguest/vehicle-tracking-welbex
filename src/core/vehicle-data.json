@@ -1,0 +1,93 @@
+[
+    {
+      "location": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "category": "Грузовой",
+      "driverName": "Иван Иванов",
+      "driverContact": "+7 123-456-78-90"
+    },
+    {
+      "location": {
+        "lat": 55.7558,
+        "lng": 37.6173
+      },
+      "category": "Пассажирский",
+      "driverName": "Петр Петров",
+      "driverContact": "+7 987-654-32-10"
+    },
+    {
+      "location": {
+        "lat": 52.5200,
+        "lng": 13.4050
+      },
+      "category": "Спецтранспорт",
+      "driverName": "Алексей Алексеев",
+      "driverContact": "+7 111-222-33-44"
+    },
+    {
+      "location": {
+        "lat": 40.7128,
+        "lng": -74.0060
+      },
+      "category": "Грузовой",
+      "driverName": "Дмитрий Дмитриев",
+      "driverContact": "+7 555-444-33-22"
+    },
+    {
+      "location": {
+        "lat": 37.7749,
+        "lng": -122.4194
+      },
+      "category": "Пассажирский",
+      "driverName": "Андрей Андреев",
+      "driverContact": "+7 999-888-77-66"
+    },
+    {
+      "location": {
+        "lat": -33.8688,
+        "lng": 151.2093
+      },
+      "category": "Спецтранспорт",
+      "driverName": "Сергей Сергеев",
+      "driverContact": "+7 333-222-11-00"
+    },
+    {
+      "location": {
+        "lat": 35.6895,
+        "lng": 139.6917
+      },
+      "category": "Грузовой",
+      "driverName": "Михаил Михайлов",
+      "driverContact": "+7 777-666-55-44"
+    },
+    {
+      "location": {
+        "lat": 51.0447,
+        "lng": -114.0719
+      },
+      "category": "Пассажирский",
+      "driverName": "Николай Николаев",
+      "driverContact": "+7 444-333-22-11"
+    },
+    {
+      "location": {
+        "lat": 48.8566,
+        "lng": 2.3522
+      },
+      "category": "Спецтранспорт",
+      "driverName": "Владимир Владимиров",
+      "driverContact": "+7 222-333-444-55"
+    },
+    {
+      "location": {
+        "lat": 33.6844,
+        "lng": -117.8265
+      },
+      "category": "Грузовой",
+      "driverName": "Константин Константинов",
+      "driverContact": "+7 666-777-888-99"
+    }
+  ]
+  

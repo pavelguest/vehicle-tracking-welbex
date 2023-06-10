@@ -2,12 +2,18 @@
   "common": {
   },
   "settings": {
-    "pageTitle": "Settings"
+    "pageTitle": "Settings",
+    "interfaceLanguage": "Interface language"
   },
   "home": {
     "pageTitle": "Vehicle Tracking"
   },
   "vehicleDetails": {
     "pageTitle": "Vehicle Details"
+  },
+  "interfaceLanguage": {
+    "modalTitle": "Interface Language",
+    "en": "English",
+    "ru": "Russian"
   }
 }

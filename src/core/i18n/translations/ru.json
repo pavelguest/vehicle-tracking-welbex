@@ -2,12 +2,18 @@
   "common": {
   },
   "settings": {
-    "pageTitle": "Настройки"
+    "pageTitle": "Настройки",
+    "interfaceLanguage": "Язык интерфейса"
   },
   "home": {
     "pageTitle": "Отслеживание ТС"
   },
   "vehicleDetails": {
     "pageTitle": "Детали ТС"
+  },
+  "interfaceLanguage": {
+    "modalTitle": "Язык интерфейса",
+    "en": "Английский",
+    "ru": "Русский"
   }
 }

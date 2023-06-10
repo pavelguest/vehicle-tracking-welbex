@@ -25,6 +25,7 @@ export const theme: Theme = {
       lineHeight: 22,
       fontWeight: '600',
       color: COLOR_PRIMARY,
+      textTransform: 'uppercase',
     },
     h1: {
       fontFamily: 'Mulish-Bold',
