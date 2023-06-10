@@ -1,0 +1,13 @@
+{
+  "common": {
+  },
+  "settings": {
+    "pageTitle": "Settings"
+  },
+  "home": {
+    "pageTitle": "Vehicle Tracking"
+  },
+  "vehicleDetails": {
+    "pageTitle": "Vehicle Details"
+  }
+}

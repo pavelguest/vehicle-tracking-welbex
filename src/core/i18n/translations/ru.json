@@ -1,0 +1,13 @@
+{
+  "common": {
+  },
+  "settings": {
+    "pageTitle": "Настройки"
+  },
+  "home": {
+    "pageTitle": "Отслеживание ТС"
+  },
+  "vehicleDetails": {
+    "pageTitle": "Детали ТС"
+  }
+}
