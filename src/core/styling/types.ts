@@ -17,6 +17,7 @@ export interface Theme {
       tabBar: string;
       activeIcon: string;
       icon: string;
+      card: string;
     };
     text: {
       primary: string;

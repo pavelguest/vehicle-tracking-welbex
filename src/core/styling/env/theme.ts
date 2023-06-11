@@ -10,6 +10,7 @@ export const theme: Theme = {
       tabBar: '#2B2B2B',
       activeIcon: '#1088C5',
       icon: COLOR_PRIMARY,
+      card: '#414144',
     },
     text: {
       primary: COLOR_PRIMARY,

@@ -5,7 +5,7 @@ module.exports = {
   plugins: ['@typescript-eslint', 'simple-import-sort'],
   rules: {
     'object-curly-spacing': ['error', 'always'],
-    'prettier/prettier': ['error', {bracketSpacing: true}],
+    'prettier/prettier': ['error', { bracketSpacing: true }],
   },
   overrides: [
     {
@@ -15,7 +15,7 @@ module.exports = {
         'no-shadow': 'off',
         'no-undef': 'off',
         'no-bitwise': 'off',
-        'no-console': ['warn', {allow: ['warn', 'error']}],
+        'no-console': ['warn', { allow: ['warn', 'error'] }],
         // 'simple-import-sort/imports': 'error',
         // if we need configure groups
         'simple-import-sort/imports': [

@@ -1,19 +1,36 @@
 {
   "common": {
+    "apply": "Apply"
   },
   "settings": {
     "pageTitle": "Settings",
     "interfaceLanguage": "Interface language"
   },
   "home": {
-    "pageTitle": "Vehicle Tracking"
+    "pageTitle": "Vehicle Tracking",
+    "vehicleName": "Vehicle name",
+    "driverName": "Driver name",
+    "vehicleCategory": "Vehicle category",
+    "filter": "Filter",
+    "map": "Map"
   },
   "vehicleDetails": {
-    "pageTitle": "Vehicle Details"
+    "pageTitle": "Vehicle Details",
+    "call": "Call",
+    "write": "Message",
+    "vehicleCategory": "Vehicle category",
+    "driverName": "Driver name",
+    "driverPhoneNumber": "Driver's contact number"
   },
   "interfaceLanguage": {
     "modalTitle": "Interface Language",
     "en": "English",
     "ru": "Russian"
+  },
+  "selectVehicleCategories": {
+    "modalTitle": "Vehicle Categories",
+    "cargo": "Cargo Vehicle",
+    "passenger": "Passenger Vehicle",
+    "specialTransport": "Special Transport"
   }
 }
