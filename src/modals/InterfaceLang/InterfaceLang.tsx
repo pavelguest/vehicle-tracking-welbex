@@ -8,7 +8,6 @@ import { Modal } from '../../components/Modal';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Locale } from '../../core/i18n/types';
 import { CONTENT_PADDING_BOTTOM } from '../../core/styling/env/constants';
-import { Text } from '../../components/Text';
 import { SUPPORTED_LOCALES } from '../../core/i18n/constants';
 import { SelectItem } from '../../components/SelectItem';
 import { useTranslation } from 'react-i18next';
@@ -29,10 +28,13 @@ const InterfaceLang: React.FC<TInterfaceLangProps> = ({
 
   const { currentLanguage, changeLanguage } = useChangeLanguage();
 
-  const handleChange = useCallback((lang: Locale) => {
-    changeLanguage(lang);
-    onPress();
-  }, []);
+  const handleChange = useCallback(
+    (lang: Locale) => {
+      changeLanguage(lang);
+      onPress();
+    },
+    [changeLanguage, onPress],
+  );
 
   return (
     <Modal ref={modalRef} setHeader title={title}>

@@ -5,8 +5,7 @@ export type NavigationParams = {
 
   Home: undefined;
   Settings: undefined;
-  VehicleDetails: undefined;
-  AddNewAlert: undefined;
+  VehicleDetails: { id: string };
 };
 
 export type NavigationProps = NativeStackNavigationProp<NavigationParams>;

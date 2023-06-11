@@ -4,38 +4,23 @@ import {
   CONTENT_PADDING_H,
   CONTENT_WIDTH,
 } from '../../core/styling/env/constants';
-import { WINDOW_HEIGHT } from '../../core/device-info';
+import { WINDOW_HEIGHT } from '@gorhom/bottom-sheet';
 
 export const useStyles = makeUseStyles(({ palette, typography }) => ({
   container: {
-    flex: 1,
     backgroundColor: palette.background.primary,
-  },
-  mapContainer: {
-    height: WINDOW_HEIGHT * 0.4,
-  },
-  infoContainer: {
-    marginTop: 8,
-    rowGap: 4,
-    paddingHorizontal: CONTENT_PADDING_H,
     flex: 1,
+    height: WINDOW_HEIGHT * 0.5,
+    paddingTop: 16,
+    paddingBottom: CONTENT_PADDING_BOTTOM,
   },
-  buttonsContainer: {
-    marginTop: CONTENT_PADDING_H,
-  },
-  infoItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    columnGap: 10,
-  },
-  itemTitle: {
-    ...typography.body2,
-    lineHeight: 19,
-    marginTop: 3,
-    marginBottom: 2,
-    color: palette.text.primary,
+  containerMultiple: {
+    gap: 16,
+    flex: 1,
+    paddingHorizontal: CONTENT_PADDING_H,
   },
   buttonSubmit: {
+    marginTop: CONTENT_PADDING_H,
     marginBottom: CONTENT_PADDING_BOTTOM,
     backgroundColor: palette.background.activeIcon,
     width: CONTENT_WIDTH,

@@ -1,9 +1,9 @@
+import React from 'react';
 import { StatusBar, View } from 'react-native';
 import { useStyles } from './Settings.styles';
 import { TSettingsProps } from './Settings.types';
 import { memo, useCallback, useRef } from 'react';
 import { LinkContainer } from './components/LinkContainer';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { Text } from '../../components/Text';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';

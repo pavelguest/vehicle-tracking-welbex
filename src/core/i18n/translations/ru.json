@@ -1,19 +1,36 @@
 {
   "common": {
+    "apply": "Применить"
   },
   "settings": {
     "pageTitle": "Настройки",
     "interfaceLanguage": "Язык интерфейса"
-  },
+    },
   "home": {
-    "pageTitle": "Отслеживание ТС"
+    "pageTitle": "Отслеживание ТС",
+    "vehicleName": "Название ТС",
+    "driverName": "Имя водителя",
+    "vehicleCategory": "Категория ТС",
+    "filter": "Фильтр",
+    "map": "Карта"
   },
   "vehicleDetails": {
-    "pageTitle": "Детали ТС"
+    "pageTitle": "Детали ТС",
+    "call": "Позвонить",
+    "write": "Написать",
+    "vehicleCategory": "Категория ТС",
+    "driverName": "Имя водителя",
+    "driverPhoneNumber": "Контактный номер телефона"
   },
   "interfaceLanguage": {
     "modalTitle": "Язык интерфейса",
     "en": "Английский",
     "ru": "Русский"
+  },
+  "selectVehicleCategories": {
+    "modalTitle": "Категории ТС",
+    "cargo": "Грузовое ТС",
+    "passenger": "Пассажирское ТС",
+    "specialTransport": "Специальный Транспорт"
   }
 }

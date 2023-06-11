@@ -6,7 +6,7 @@ import { useStyles } from './SelectItem.styles';
 import { SelectItemProps } from './SelectItem.types';
 import { Touchable } from '../Touchable';
 import { Text } from '../Text';
-import ChevronDownSelectedIcon from '../Icons/ChevronDownSelectedIcon';
+import SelectedIcon from '../Icons/SelectedIcon';
 
 const SelectItem: React.FC<SelectItemProps> = ({
   label,
@@ -23,7 +23,7 @@ const SelectItem: React.FC<SelectItemProps> = ({
         onPress={handlePress}
         hitSlop={0}>
         <Text style={[styles.name, labelStyle]}>{label}</Text>
-        {isSelected && <ChevronDownSelectedIcon color={styles.icon.color} />}
+        {isSelected && <SelectedIcon color={styles.icon.color} />}
       </Touchable>
       <View style={styles.separator} />
     </>

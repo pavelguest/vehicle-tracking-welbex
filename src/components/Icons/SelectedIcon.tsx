@@ -15,5 +15,5 @@ const SvgComponent = (props: SvgProps) => (
   </Svg>
 );
 
-const ChevronDownSelectedIcon = memo(SvgComponent);
-export default ChevronDownSelectedIcon;
+const SelectedIcon = memo(SvgComponent);
+export default SelectedIcon;

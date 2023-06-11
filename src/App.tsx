@@ -7,6 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import NavigationRoot from './navigation/NavigationRoot';
 import { StatusBar } from 'react-native';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
+import { StoreProvider, rootStore } from './store';
 
 function App() {
   const theme = useTheme();
@@ -27,25 +28,27 @@ function App() {
 
   return (
     <GestureHandlerRootView style={styleFlex}>
-      <BottomSheetModalProvider>
-        <SafeAreaProvider>
-          <NavigationContainer
-            ref={navigationRef}
-            onReady={() => {
-              routeNameRef.current =
-                navigationRef?.current?.getCurrentRoute()?.name;
-            }}
-            onStateChange={handleStateChange}>
-            <StatusBar
-              barStyle="dark-content"
-              translucent={true}
-              hidden={false}
-              backgroundColor="transparent"
-            />
-            <NavigationRoot />
-          </NavigationContainer>
-        </SafeAreaProvider>
-      </BottomSheetModalProvider>
+      <StoreProvider value={rootStore}>
+        <BottomSheetModalProvider>
+          <SafeAreaProvider>
+            <NavigationContainer
+              ref={navigationRef}
+              onReady={() => {
+                routeNameRef.current =
+                  navigationRef?.current?.getCurrentRoute()?.name;
+              }}
+              onStateChange={handleStateChange}>
+              <StatusBar
+                barStyle="dark-content"
+                translucent={true}
+                hidden={false}
+                backgroundColor="transparent"
+              />
+              <NavigationRoot />
+            </NavigationContainer>
+          </SafeAreaProvider>
+        </BottomSheetModalProvider>
+      </StoreProvider>
     </GestureHandlerRootView>
   );
 }
