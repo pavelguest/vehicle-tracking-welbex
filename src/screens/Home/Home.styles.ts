@@ -1,5 +1,8 @@
 import { makeUseStyles } from 'react-native-stylex';
-import { CONTENT_PADDING_H } from '../../core/styling/env/constants';
+import {
+  CONTENT_PADDING_H,
+  CONTENT_WIDTH,
+} from '../../core/styling/env/constants';
 
 export const useStyles = makeUseStyles(({ palette, typography }) => ({
   container: {
@@ -18,6 +21,11 @@ export const useStyles = makeUseStyles(({ palette, typography }) => ({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+  },
+  map: {
+    marginTop: CONTENT_PADDING_H,
+    width: CONTENT_WIDTH,
+    height: '100%',
   },
   mapIconContainer: {
     height: 35,

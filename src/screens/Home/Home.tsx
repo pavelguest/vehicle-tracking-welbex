@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FlatList, StatusBar, View } from 'react-native';
 import { useStyles } from './Home.styles';
 import { THomeProps, TVehicle } from './Home.types';
@@ -14,12 +14,16 @@ import { useStore } from '../../store';
 import i18next from 'i18next';
 import { observer } from 'mobx-react-lite';
 import { Text } from '../../components/Text';
+import { Map } from '../../components/Map';
+import ListIcon from '../../components/Icons/ListIcon';
 
 const itemKeyExtractor = (item: TVehicle) => item.id;
 
 const Home: React.FC<THomeProps> = observer(() => {
   const styles = useStyles();
   const { t } = useTranslation();
+
+  const [showMap, setShowMap] = useState(false);
 
   const { vehiclesStore } = useStore();
 
@@ -53,6 +57,10 @@ const Home: React.FC<THomeProps> = observer(() => {
     selectVehicleCategoriesModalRef.current?.present();
   }, []);
 
+  const handleShowMap = useCallback(() => {
+    setShowMap(!showMap);
+  }, [setShowMap, showMap]);
+
   return (
     <View style={styles.container}>
       <StatusBar
@@ -67,18 +75,32 @@ const Home: React.FC<THomeProps> = observer(() => {
           chosen={!!chosenFilters}
           handlePress={handleNavigateToSelectVehicleCategories}
         />
-        <Touchable style={styles.mapIconContainer}>
-          <Text style={styles.mapIconTitle}>{t('home.map')}</Text>
-          <LocationIcon color={styles.iconColor.color} />
+        <Touchable style={styles.mapIconContainer} onPress={handleShowMap}>
+          <Text style={styles.mapIconTitle}>
+            {!showMap ? t('home.map') : t('home.list')}
+          </Text>
+          {!showMap ? (
+            <LocationIcon color={styles.iconColor.color} />
+          ) : (
+            <ListIcon color={styles.iconColor.color} />
+          )}
         </Touchable>
       </View>
-      <FlatList
-        contentContainerStyle={styles.scrollContainer}
-        showsVerticalScrollIndicator={false}
-        data={filteredVehiclesData}
-        renderItem={renderVehicle}
-        keyExtractor={itemKeyExtractor}
-      />
+      {showMap ? (
+        <Map
+          containerStyle={styles.map}
+          multiple
+          vehiclesData={filteredVehiclesData}
+        />
+      ) : (
+        <FlatList
+          contentContainerStyle={styles.scrollContainer}
+          showsVerticalScrollIndicator={false}
+          data={filteredVehiclesData}
+          renderItem={renderVehicle}
+          keyExtractor={itemKeyExtractor}
+        />
+      )}
       <SelectVehicleCategories
         title={t('selectVehicleCategories.modalTitle')}
         modalRef={selectVehicleCategoriesModalRef}

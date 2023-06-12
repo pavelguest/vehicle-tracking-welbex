@@ -17,3 +17,5 @@ export const VEHICLES_DATA_LOCALE_PATH = {
   en: vehiclesEn,
   ru: vehiclesRu,
 };
+
+export const API_KEY = 'AIzaSyA7koO9sc-X6xEqyk8vwBRygHquc-BVUzU';
