@@ -9,6 +9,10 @@ import { Text } from '../../components/Text';
 import { useStore } from '../../store';
 import { callNumber } from '../../core/utils/callNumber';
 import { Map } from '../../components/Map';
+import UserIcon from '../../components/Icons/UserIcon';
+import PhoneIcon from '../../components/Icons/PhoneIcon';
+import CarIcon from '../../components/Icons/CarIcon';
+import { openWhatsApp } from '../../core/utils/openWhatsApp';
 
 const VehicleDetails: React.FC<TVehicleDetailsProps> = ({ route }) => {
   const styles = useStyles();
@@ -27,7 +31,9 @@ const VehicleDetails: React.FC<TVehicleDetailsProps> = ({ route }) => {
     vehicle?.driverContact && callNumber(vehicle.driverContact);
   }, [vehicle?.driverContact]);
 
-  const handleToSendMessage = useCallback(() => {}, []);
+  const handleToSendMessage = useCallback(() => {
+    vehicle?.driverContact && openWhatsApp(vehicle.driverContact);
+  }, [vehicle?.driverContact]);
 
   return (
     <SafeAreaView edges={['bottom']} style={styles.container}>
@@ -44,6 +50,9 @@ const VehicleDetails: React.FC<TVehicleDetailsProps> = ({ route }) => {
       )}
       <View style={styles.infoContainer}>
         <View style={styles.infoItem}>
+          <View style={styles.icon}>
+            <CarIcon color={styles.iconColor.color} />
+          </View>
           <Text style={styles.itemTitle}>
             {`${t('vehicleDetails.vehicleCategory')}: ${t(
               `selectVehicleCategories.${vehicle?.category}`,
@@ -51,11 +60,17 @@ const VehicleDetails: React.FC<TVehicleDetailsProps> = ({ route }) => {
           </Text>
         </View>
         <View style={styles.infoItem}>
+          <View style={styles.icon}>
+            <UserIcon color={styles.iconColor.color} />
+          </View>
           <Text style={styles.itemTitle}>
             {`${t('vehicleDetails.driverName')}: ${vehicle?.driverName}`}
           </Text>
         </View>
         <View style={styles.infoItem}>
+          <View style={styles.icon}>
+            <PhoneIcon color={styles.iconColor.color} />
+          </View>
           <Text style={styles.itemTitle}>
             {`${t('vehicleDetails.driverPhoneNumber')}: ${
               vehicle?.driverContact

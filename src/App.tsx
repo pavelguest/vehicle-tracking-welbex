@@ -17,7 +17,7 @@ function App() {
     backgroundColor: theme.palette.background.primary,
   };
 
-  const handleStateChange = useCallback(async () => {
+  const handleStateChange = useCallback(() => {
     if (!navigationRef.current) {
       return;
     }

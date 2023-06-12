@@ -1,5 +1,4 @@
 import { Theme } from '../types';
-import { CONTENT_PADDING_H } from './constants';
 
 const COLOR_PRIMARY = '#ffffff';
 
