@@ -4,7 +4,7 @@ import {
   CONTENT_PADDING_H,
   CONTENT_WIDTH,
 } from '../../core/styling/env/constants';
-import { WINDOW_HEIGHT } from '../../core/device-info';
+import { WINDOW_HEIGHT, WINDOW_WIDTH } from '../../core/device-info';
 
 export const useStyles = makeUseStyles(({ palette, typography }) => ({
   container: {
@@ -13,6 +13,10 @@ export const useStyles = makeUseStyles(({ palette, typography }) => ({
   },
   mapContainer: {
     height: WINDOW_HEIGHT * 0.4,
+  },
+  map: {
+    width: WINDOW_WIDTH,
+    height: '100%',
   },
   infoContainer: {
     marginTop: 8,

@@ -12,7 +12,8 @@
     "driverName": "Имя водителя",
     "vehicleCategory": "Категория ТС",
     "filter": "Фильтр",
-    "map": "Карта"
+    "map": "Карта",
+    "list": "Список"
   },
   "vehicleDetails": {
     "pageTitle": "Детали ТС",

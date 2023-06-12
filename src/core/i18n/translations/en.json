@@ -12,7 +12,8 @@
     "driverName": "Driver name",
     "vehicleCategory": "Vehicle category",
     "filter": "Filter",
-    "map": "Map"
+    "map": "Map",
+    "list": "List"
   },
   "vehicleDetails": {
     "pageTitle": "Vehicle Details",

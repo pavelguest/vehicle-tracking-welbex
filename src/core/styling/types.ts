@@ -17,6 +17,7 @@ export interface Theme {
       tabBar: string;
       activeIcon: string;
       icon: string;
+      mapIcon: string;
       card: string;
     };
     text: {

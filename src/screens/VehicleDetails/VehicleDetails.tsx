@@ -8,6 +8,7 @@ import { Button } from '../../components/Button';
 import { Text } from '../../components/Text';
 import { useStore } from '../../store';
 import { callNumber } from '../../core/utils/callNumber';
+import { Map } from '../../components/Map';
 
 const VehicleDetails: React.FC<TVehicleDetailsProps> = ({ route }) => {
   const styles = useStyles();
@@ -36,7 +37,11 @@ const VehicleDetails: React.FC<TVehicleDetailsProps> = ({ route }) => {
         hidden={false}
         backgroundColor="transparent"
       />
-      <View style={styles.mapContainer} />
+      {vehicle?.location && (
+        <View style={styles.mapContainer}>
+          <Map containerStyle={styles.map} vehicleData={vehicle} />
+        </View>
+      )}
       <View style={styles.infoContainer}>
         <View style={styles.infoItem}>
           <Text style={styles.itemTitle}>

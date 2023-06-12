@@ -3,7 +3,7 @@ import { memo } from 'react';
 
 import Svg, { Path, SvgProps } from 'react-native-svg';
 const SvgComponent = (props: SvgProps) => (
-  <Svg width={16} height={16} {...props}>
+  <Svg width={16} height={16} fill="none" {...props}>
     <Path
       stroke={props.color}
       strokeLinecap="round"
