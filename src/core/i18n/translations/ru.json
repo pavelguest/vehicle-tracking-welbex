@@ -21,7 +21,7 @@
     "write": "Написать",
     "vehicleCategory": "Категория ТС",
     "driverName": "Имя водителя",
-    "driverPhoneNumber": "Контактный номер телефона"
+    "driverPhoneNumber": "Номер телефона"
   },
   "interfaceLanguage": {
     "modalTitle": "Язык интерфейса",

@@ -21,7 +21,7 @@
     "write": "Message",
     "vehicleCategory": "Vehicle category",
     "driverName": "Driver name",
-    "driverPhoneNumber": "Driver's contact number"
+    "driverPhoneNumber": "Phone number"
   },
   "interfaceLanguage": {
     "modalTitle": "Interface Language",

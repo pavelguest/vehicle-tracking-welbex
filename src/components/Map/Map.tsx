@@ -45,9 +45,12 @@ const Map: React.FC<IMapProps> = ({
     return undefined;
   }, [vehicleData, vehiclesData]);
 
-  const handleNavigateToVehicleDetails = useCallback((id: string) => {
-    navigation.navigate('VehicleDetails', { id: id });
-  }, []);
+  const handleNavigateToVehicleDetails = useCallback(
+    (id: string) => {
+      navigation.navigate('VehicleDetails', { id: id });
+    },
+    [navigation],
+  );
 
   return (
     <View style={combinedContainerStyles}>

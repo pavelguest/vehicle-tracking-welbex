@@ -20,7 +20,7 @@ export const useStyles = makeUseStyles(({ palette, typography }) => ({
   },
   infoContainer: {
     marginTop: 8,
-    rowGap: 4,
+    rowGap: 10,
     paddingHorizontal: CONTENT_PADDING_H,
     flex: 1,
   },
@@ -37,6 +37,17 @@ export const useStyles = makeUseStyles(({ palette, typography }) => ({
     lineHeight: 19,
     marginTop: 3,
     marginBottom: 2,
+    color: palette.text.primary,
+  },
+  icon: {
+    width: 30,
+    height: 30,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: palette.border.primary,
+  },
+  iconColor: {
     color: palette.text.primary,
   },
   buttonSubmit: {
